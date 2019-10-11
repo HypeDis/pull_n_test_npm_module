@@ -8,8 +8,7 @@
     "start": "tsc && node build/index.js"
   },
   "bin": {
-    "@hypedis/parat": "bin/parat",
-    "create-project": "bin/parat"
+    "parat": "bin/parat"
   },
   "publishConfig": {
     "access": "public"
@@ -26,6 +25,7 @@
   "author": "MB",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^2.4.2"
+    "chalk": "^2.4.2",
+    "esm": "^3.2.25"
   }
 }

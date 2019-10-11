@@ -9,6 +9,7 @@ var deleteFolders_1 = require("./deleteFolders");
 var generateJSON_1 = require("./generateJSON");
 var pullRepos_1 = require("./pullRepos");
 var testStretches_1 = require("./testStretches");
+var helpText_1 = require("./helpText");
 var runSelectedScript = function (flag, args) {
     switch (flag) {
         case '--init':
@@ -33,14 +34,17 @@ var runSelectedScript = function (flag, args) {
             // add a prompt here
             deleteFolders_1.deleteFolders();
             break;
+        case '--help':
+            console.log(helpText_1.helpText);
+            break;
         default:
             // add help flag
             console.error(chalk_1.default.red('No such flag'));
             return;
     }
 };
-var main = function (argv) {
+exports.main = function (argv) {
     var _a = argv.slice(2), flag = _a[0], args = _a.slice(1);
     runSelectedScript(flag, args);
 };
-main(process.argv);
+// main(process.argv);

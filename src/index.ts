@@ -5,6 +5,7 @@ import { deleteFolders } from './deleteFolders';
 import { generateJSONFile } from './generateJSON';
 import { pullAllRepos } from './pullRepos';
 import { testAll } from './testStretches';
+import { helpText } from './helpText';
 
 const runSelectedScript = (flag: string, args: string[]): void => {
   switch (flag) {
@@ -30,6 +31,9 @@ const runSelectedScript = (flag: string, args: string[]): void => {
       // add a prompt here
       deleteFolders();
       break;
+    case '--help':
+      console.log(helpText);
+      break;
     default:
       // add help flag
       console.error(chalk.red('No such flag'));
@@ -37,9 +41,9 @@ const runSelectedScript = (flag: string, args: string[]): void => {
   }
 };
 
-const main = (argv: string[]): void => {
+export const main = (argv: string[]): void => {
   const [flag, ...args] = argv.slice(2);
   runSelectedScript(flag, args);
 };
 
-main(process.argv);
+// main(process.argv);
