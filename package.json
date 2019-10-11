@@ -1,14 +1,29 @@
 {
-  "name": "tester",
+  "name": "@hypedis/parat",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A CLI for pulling and testing multiple repos simultaneously",
+  "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && node build/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "bin": {
+    "@hypedis/parat": "bin/parat",
+    "create-project": "bin/parat"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "cli",
+    "fullstack",
+    "pull",
+    "all",
+    "repos",
+    "and",
+    "test"
+  ],
+  "author": "MB",
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.2"
