@@ -1,6 +1,6 @@
 {
   "name": "@hypedis/pnt",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "A CLI for pulling and testing multiple repos simultaneously",
   "main": "build/index.js",
   "scripts": {
