@@ -1,6 +1,21 @@
-# Pull and test multiple repos simultaneously! WOW!
+# Pull 'n Test
+
+## Pull and test multiple repos simultaneously! WOW!
+
+## Installation:
+
+```
+npm i -g @hypedis/pnt
+```
 
 ## Commands:
+
+Use the pnt keyword before all commands
+Example:
+
+```
+pnt --init ./students.csv
+```
 
 --init \<filepath> <br>
 Create the studentData.json from a csv file.

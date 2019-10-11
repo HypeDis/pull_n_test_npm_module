@@ -1,6 +1,6 @@
 {
-  "name": "@hypedis/parat",
-  "version": "0.1.0",
+  "name": "@hypedis/pnt",
+  "version": "0.1.1",
   "description": "A CLI for pulling and testing multiple repos simultaneously",
   "main": "build/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "tsc && node build/index.js"
   },
   "bin": {
-    "parat": "bin/parat"
+    "pnt": "bin/pnt"
   },
   "publishConfig": {
     "access": "public"

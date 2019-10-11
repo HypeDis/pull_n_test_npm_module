@@ -22,6 +22,7 @@ export const createLocalRepos = (): void => {
   studentData.forEach(({ firstName, lastName, githubRepo, folderName }) => {
     const mkdir = spawn('mkdir', [folderName]);
     mkdir.on('close', code => {
+      // TODO: check if directory exists and git repo does not
       if (code === 0) {
         const gitClone = spawn('git', ['clone', githubRepo, folderName]);
         gitClone.on('close', code => {
