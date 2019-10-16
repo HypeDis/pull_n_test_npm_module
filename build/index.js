@@ -21,7 +21,8 @@ var runSelectedScript = function (flag, args) {
             generateJSON_1.generateJSONFile(filePath);
             break;
         case '--createAll':
-            createLocalRepos_1.createLocalRepos();
+            var requestType = args[0];
+            createLocalRepos_1.createLocalRepos(requestType);
             break;
         case '--pullAll':
             pullRepos_1.pullAllRepos();

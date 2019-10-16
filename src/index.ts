@@ -18,7 +18,8 @@ const runSelectedScript = (flag: string, args: string[]): void => {
       generateJSONFile(filePath);
       break;
     case '--createAll':
-      createLocalRepos();
+      const requestType = args[0];
+      createLocalRepos(requestType);
       break;
     case '--pullAll':
       pullAllRepos();

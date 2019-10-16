@@ -24,11 +24,14 @@ exports.parseCSV = function (filePath) {
         var firstName = _a[0], lastName = _a[1], gitHandle = _a[2], repoName = _a[3];
         firstName = firstName.trim();
         lastName = lastName.trim();
+        gitHandle = gitHandle.trim();
+        repoName = repoName.trim();
         return {
             firstName: firstName,
             lastName: lastName,
             folderName: firstName + "_" + lastName,
-            githubRepo: "git@github.com:" + gitHandle + "/" + repoName + ".git",
+            githubRepoSSH: "git@github.com:" + gitHandle + "/" + repoName + ".git",
+            githubRepoHTTPS: "https://github.com/" + gitHandle + "/" + repoName,
         };
     });
     return allStudentsInfo;

@@ -6,7 +6,8 @@ export interface StudentInfo {
   firstName: string;
   lastName: string;
   folderName: string;
-  githubRepo: string;
+  githubRepoSSH: string;
+  githubRepoHTTPS: string;
 }
 
 export const parseCSV = (filePath: string): StudentInfo[] => {
@@ -26,11 +27,14 @@ export const parseCSV = (filePath: string): StudentInfo[] => {
     ([firstName, lastName, gitHandle, repoName]) => {
       firstName = firstName.trim();
       lastName = lastName.trim();
+      gitHandle = gitHandle.trim();
+      repoName = repoName.trim();
       return {
         firstName,
         lastName,
         folderName: `${firstName}_${lastName}`,
-        githubRepo: `git@github.com:${gitHandle}/${repoName}.git`,
+        githubRepoSSH: `git@github.com:${gitHandle}/${repoName}.git`,
+        githubRepoHTTPS: `https://github.com/${gitHandle}/${repoName}`,
       };
     },
   );
