@@ -34,17 +34,17 @@ export const createLocalRepos = (requestType: string | undefined): void => {
           gitClone.on('close', code => {
             if (code !== 0) {
               console.error(
-                chalk.red(`error creating repo for ${firstName} ${lastName}`),
+                chalk.red(`error creating repo for ${firstName} ${lastName}`)
               );
             }
           });
         } else {
           console.error(
-            chalk.red('error creating folder for ', firstName, ' ', lastName),
+            chalk.red('error creating folder for ', firstName, ' ', lastName)
           );
         }
       });
-    },
+    }
   );
   console.log('Repos created');
 };
